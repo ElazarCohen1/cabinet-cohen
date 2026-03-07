@@ -8,7 +8,7 @@ export default function Footer() {
               <h2 className="text-xl font-bold mb-2">Cabinet Cohen</h2>
       
               <div className="mb-2">
-                  <Link href="/mentionslegales" className="underline hover:text-gray-300">
+                 <Link href="/mentionslegales" className="text-white underline hover:text-gray-300">
                     Mentions légales
                   </Link>
                 </div>
@@ -17,10 +17,10 @@ export default function Footer() {
                 <p className="mb-4">Adresse: 26 rue Daubighy, 75017 Paris</p>
       
                 <div className="flex flex-col items-center space-y-2">
-                  <a href="mailto:avocat.cohen@gmail.com" className="underline hover:text-gray-300">
-                    Email: avocat.cohen@gmail.com
-                  </a>
-                  <a href="tel:+33153950973" className="underline hover:text-gray-300">
+                  <a href="mailto:avocat.cohen@gmail.com" className="text-white no-underline hover:text-gray-300">
+                      Email: avocat.cohen@gmail.com
+                    </a>
+                  <a href="tel:+33153950973" className="text-white no-underline hover:text-gray-300">
                     Téléphone: +33 1 53 95 09 73
                   </a>
                 </div>
