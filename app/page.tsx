@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import Title from "./components/title-font";
 import img1 from "@images/home_hero.jpg";
 import img2 from "@images/home_cabinetSection.jpg";
+import Link from "next/link";
 
 // Composant pour les domaines d'intervention
 function Domaine({ name, description }: { name: string; description: string }) {
@@ -50,12 +51,12 @@ export default function Accueil() {
           <p className="text-xl max-w-2xl mb-8">
             Notre expertise juridique au service de vos droits
           </p>
-          <button
-            className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3 rounded-full transition-colors duration-300"
-            onClick={() => navigate.push("/domaines")}
+          <Link
+            className="no-underline! bg-blue-500 hover:bg-blue-800 text-white px-8 py-3  transition-colors duration-300"
+            href="/domaines"
           >
             Découvrir nos services
-          </button>
+          </Link>
         </div>
       </div>
 
