@@ -70,10 +70,10 @@ export default function Accueil() {
             className="drop-shadow-lg md:text-8xl"
           />
           <p className="text-lg sm:text-xl max-w-2xl mt-6 mb-10 text-ivory/85">
-            Notre expertise juridique au service de vos droits
+            Mon expertise juridique au service de vos droits
           </p>
           <Button href="/domaines" variant="primary">
-            Découvrir nos services
+            Découvrir les services
           </Button>
         </div>
       </div>
@@ -122,7 +122,7 @@ export default function Accueil() {
               des solutions personnalisées et efficaces dans divers domaines du droit.
             </p>
             <Button variant="outline-dark" onClick={() => navigate.push("/cabinet")}>
-              Découvrir notre histoire
+              Découvrir l'histoire
             </Button>
           </div>
         </div>
