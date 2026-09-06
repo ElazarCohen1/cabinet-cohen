@@ -85,7 +85,7 @@ export default function Cabinet() {
               </h2>
               <p className="text-slate leading-relaxed">
                 Disponibilité et dévouement sont les piliers de
-                la pratique juridique. Nous nous engageons à défendre vos
+                la pratique juridique. Mr Cohen s'engage à défendre vos
                 intérêts avec rigueur et détermination, dans le respect des
                 règles déontologiques de la profession.
               </p>

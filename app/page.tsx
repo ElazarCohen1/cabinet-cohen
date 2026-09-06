@@ -114,7 +114,7 @@ export default function Accueil() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-2xl bg-ivory p-10 shadow-2xl">
             <p className="eyebrow mb-3">Depuis 1997</p>
-            <h2 className="font-display text-4xl mb-6 text-navy-900">Notre Cabinet</h2>
+            <h2 className="font-display text-4xl mb-6 text-navy-900">Le Cabinet</h2>
             <p className="text-ink leading-relaxed mb-8">
               Maître Cohen a prêté serment le 4 janvier 1997. En tant qu&apos;avocat au
               barreau de Paris depuis près de 30 ans, le cabinet Cohen allie
@@ -131,7 +131,7 @@ export default function Accueil() {
       {/* CONTACT */}
       <div id="contact" className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <Title eyebrow="Nous rencontrer" text="Contactez-nous" className="text-navy-900 mb-16" />
+          <Title eyebrow="Nous rencontrer" text="Contactez le cabinet" className="text-navy-900 mb-16" />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="space-y-4 text-ink">
@@ -140,8 +140,8 @@ export default function Accueil() {
                 <p><span className="font-semibold text-navy-900">Email — </span>avocat.cohen@hotmail.com</p>
               </div>
               <p className="text-slate mt-6 leading-relaxed">
-                N&apos;hésitez pas à nous contacter pour toute question ou prise de rendez-vous.
-                Notre équipe vous répondra dans les plus brefs délais.
+                N&apos;hésitez pas à contacter le cabinet pour toute question ou prise de rendez-vous.
+                Mr Cohen vous répondra dans les plus brefs délais.
               </p>
             </div>
             <Map />
