@@ -2,62 +2,77 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from 'next/image';
-import { Navbar, Container, Nav } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import Image from "next/image";
 import logo from "@images/logo.png";
+
+const links = [
+  { href: "/", label: "Accueil" },
+  { href: "/cabinet", label: "Cabinet" },
+  { href: "/domaines", label: "Domaines" },
+  { href: "/honoraires", label: "Honoraires" },
+];
 
 export default function NavbarMenu() {
   const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const solid = scrolled || open;
+
   return (
-    <Navbar
-      expand="lg"
-      fixed="top"
-      className={`z-50 w-full transition-all duration-300 ${
-        scrolled
-          ? "bg-transparent backdrop-blur-lg "
-          : "bg-transparent"
+    <header
+      className={`fixed top-0 z-50 w-full transition-colors duration-300 ${
+        solid ? "bg-navy-950" : "bg-transparent"
       }`}
     >
-      <Container>
-        <Navbar.Brand as={Link} href="/">
-          <Image
-            width={50}
-            height={50}
-            src={logo.src}
-            alt="Cabinet Cohen"
-            className="h-20 w-auto d-inline-block align-top"
-          />
-        </Navbar.Brand>
+      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-20">
+        <Link href="/" className="shrink-0">
+          <Image src={logo} alt="Cabinet Cohen" className="h-14 w-auto" priority />
+        </Link>
 
-        <Navbar.Toggle aria-controls="main-navbar" />
-        <Navbar.Collapse id="main-navbar">
-          <Nav className="ms-auto">
-            {[
-              { href: "/", label: "Accueil" },
-              { href: "/cabinet", label: "Cabinet" },
-              { href: "/domaines", label: "Domaines" },
-              { href: "/honoraires", label: "Honoraires" },
-            ].map((item) => (
-              <Nav.Link
-                key={item.href}
-                as={Link}
-                href={item.href}
-                className="px-4 text-ivory/90 hover:text-brass transition-colors duration-200 text-sm uppercase tracking-widest"
-              >
-                {item.label}
-              </Nav.Link>
-            ))}
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+        <nav className="hidden lg:flex items-center gap-8">
+          {links.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-sm uppercase tracking-widest text-ivory/90 hover:text-brass transition-colors duration-200"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+
+        <button
+          className="lg:hidden text-ivory"
+          aria-label="Ouvrir le menu"
+          onClick={() => setOpen((o) => !o)}
+        >
+          <span className="block w-6 h-px bg-current mb-1.5" />
+          <span className="block w-6 h-px bg-current mb-1.5" />
+          <span className="block w-6 h-px bg-current" />
+        </button>
+      </div>
+
+      {open && (
+        <nav className="lg:hidden bg-navy-950 px-6 pb-6 flex flex-col gap-4">
+          {links.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={() => setOpen(false)}
+              className="text-sm uppercase tracking-widest text-ivory/90 hover:text-brass"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+      )}
+    </header>
   );
 }

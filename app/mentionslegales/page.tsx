@@ -1,29 +1,106 @@
+import Title from "../components/title-font";
+
+function Section({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <div className="mb-10">
+      <h2 className="font-display text-2xl text-navy-900 mb-3">{title}</h2>
+      <div className="text-ink leading-relaxed space-y-3">{children}</div>
+    </div>
+  );
+}
+
 export default function MentionsLegales() {
-    return (
-        <div className="p-8 bg-white rounded-lg shadow-md mt-10">
-            <h1 className="text-3xl font-bold mb-4">Mentions Légales</h1>
-            <p className="mb-4">
-                Conformément aux dispositions des articles 6-III et 19 de la Loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site internet www.cabinetcohen.fr l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi.
-            </p>
-            <h2 className="text-2xl font-semibold mb-2">Éditeur du site</h2>
-            <p className="mb-4">
-                Le site www.cabinetcohen.fr est édité par le Cabinet Cohen, dont le siège social est situé au 26 rue Daubigny, 75017 Paris. 
-                Directeur de la publication : Maître Cohen.
-            </p>   
-            <h2 className="text-2xl font-semibold mb-2">Hébergeur</h2>
-            <p className="mb-4">
-                Le site est hébergé par o2switch, dont le siège social est situé au 224 Boulevard Gustave Flaubert, 63000 Clermont-Ferrand, France.
-            </p>
-            <h2 className="text-2xl font-semibold mb-2">Propriété intellectuelle</h2>
-            <p className="mb-4">
-                Le contenu du site www.cabinetcohen.fr, incluant, de façon non limitative, les textes, images, graphismes, logo, icônes, sons, logiciels, est la propriété exclusive du Cabinet Cohen à l'exception des marques, logos ou contenus appartenant à d'autres sociétés partenaires ou auteurs.
-                Toute reproduction, distribution, modification, adaptation, retransmission ou publication, même partielle, de ces différents éléments est strictement interdite sans l'accord exprès par écrit du Cabinet Cohen. Cette représentation ou reproduction, par quelque procédé que ce soit, constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.
-            </p>
-            <h2 className="text-2xl font-semibold mb-2">Données personnelles</h2>
-            <p className="mb-4">
-                Le Cabinet Cohen s'engage à ce que la collecte et le traitement de vos données, effectués à partir du site www.cabinetcohen.fr, soient conformes au règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés.
-                Vous disposez d'un droit d'accès, de rectification, de modification et de suppression des données qui vous concernent. Vous pouvez exercer ce droit en nous contactant à l'adresse email :
-            </p>
-        </div>
-    );
+  return (
+    <div className="bg-white pt-32 pb-24">
+      <div className="max-w-3xl mx-auto px-6">
+        <Title as="h1" text="Mentions légales" size="text-4xl sm:text-5xl" className="text-navy-900 mb-12" />
+
+        <Section title="Éditeur du site">
+          <p>
+            Le site www.cabinetcohen.fr est édité par la <strong>SELARLU Cabinet Cohen</strong>,
+            Société d&apos;exercice libéral à responsabilité limitée, inscrite au RCS de Paris.
+          </p>
+          <ul className="list-none space-y-1">
+            <li>SIREN : 533 183 349</li>
+            <li>SIRET (siège) : 533 183 349 00034</li>
+            <li>N° TVA intracommunautaire : FR77 533 183 349</li>
+            <li>Code NAF/APE : 69.10Z (69.10Y) — Activités juridiques</li>
+            <li>Siège social : 26 rue Daubigny, 75017 Paris</li>
+            <li>Date de création : 10/06/2011</li>
+          </ul>
+          <p>
+            Directeur de la publication : Maître Cohen.
+          </p>
+        </Section>
+
+        <Section title="Barreau d'appartenance">
+          <p>
+            Ordre des avocats de Paris — 11 place Dauphine, 75001 Paris —{" "}
+            <a href="https://www.avocatparis.org" className="text-brass hover:underline">
+              www.avocatparis.org
+            </a>
+          </p>
+          <p className="text-sm text-slate">
+            L&apos;avocat est soumis au Règlement Intérieur National (RIN) de la profession
+            d&apos;avocat.
+          </p>
+        </Section>
+
+        <Section title="Assurance responsabilité civile professionnelle">
+          <p>
+            Conformément à la réglementation applicable à la profession d&apos;avocat, le cabinet
+            est assuré au titre de sa responsabilité civile professionnelle et bénéficie d&apos;une
+            garantie financière auprès de la Caisse des Règlements Pécuniaires des Avocats (CARPA)
+            de Paris.
+          </p>
+        </Section>
+
+        <Section title="Hébergement">
+          <p>
+            Le site est hébergé par o2switch, dont le siège social est situé au 224 Boulevard
+            Gustave Flaubert, 63000 Clermont-Ferrand, France.
+          </p>
+        </Section>
+
+        <Section title="Propriété intellectuelle">
+          <p>
+            Le contenu du site (textes, images, graphismes, logo, icônes) est la propriété
+            exclusive de la SELARLU Cabinet Cohen, sauf mention contraire. Toute reproduction,
+            distribution ou adaptation, même partielle, est interdite sans accord écrit préalable
+            et constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code
+            de la propriété intellectuelle.
+          </p>
+        </Section>
+
+        <Section title="Médiation de la consommation">
+          <p>
+            Conformément à l&apos;article L.616-1 du Code de la consommation, en cas de litige,
+            le client peut recourir gratuitement au service de médiation suivant :
+          </p>
+          <p className="text-sm text-slate">
+            Le médiateur de la consommation compétent pour la profession d&apos;avocat est
+            généralement le Médiateur de la consommation du Conseil national des barreaux
+            (MCNB) — à confirmer et personnaliser selon votre situation.
+          </p>
+        </Section>
+
+        <Section title="Données personnelles">
+          <p>
+            Le traitement de vos données personnelles est détaillé dans notre{" "}
+            <a href="/confidentialite" className="text-brass hover:underline">
+              politique de confidentialité
+            </a>
+            .
+          </p>
+        </Section>
+
+        <Section title="Droit applicable">
+          <p>
+            Les présentes mentions légales sont soumises au droit français. En cas de litige,
+            les tribunaux français seront seuls compétents.
+          </p>
+        </Section>
+      </div>
+    </div>
+  );
 }

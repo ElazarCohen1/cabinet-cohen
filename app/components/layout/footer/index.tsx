@@ -15,7 +15,7 @@ export default function Footer() {
           <p className="eyebrow mb-4">Contact</p>
           <div className="flex flex-col gap-2 text-sm text-slate-on-navy">
             <a href="mailto:avocat.cohen@gmail.com" className="hover:text-brass transition-colors">
-              avocat.cohen@gmail.com
+              avocat.cohen@hotmail.com
             </a>
             <a href="tel:+33153950973" className="hover:text-brass transition-colors">
               +33 1 53 95 09 73
@@ -36,7 +36,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-navy-800 py-6 text-center text-xs text-slate-on-navy">
-        © 2025 Cabinet Cohen. Tous droits réservés.
+        <p>© {new Date().getFullYear()} Cabinet Cohen. Tous droits réservés.</p>
       </div>
     </footer>
   );

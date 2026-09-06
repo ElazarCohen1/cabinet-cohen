@@ -1,9 +1,9 @@
-// app/components/title-font/index.tsx
 type TitleProps = {
   text: string;
   className?: string;
   eyebrow?: string;
-  size?: string; // ex: "text-5xl sm:text-6xl lg:text-8xl"
+  size?: string;
+  as?: "h1" | "h2";
 };
 
 const defaultSize = "text-4xl sm:text-5xl md:text-6xl lg:text-7xl";
@@ -13,13 +13,14 @@ export default function Title({
   className = "",
   eyebrow,
   size = defaultSize,
+  as: Tag = "h2",
 }: TitleProps) {
   return (
     <div>
       {eyebrow && <p className="eyebrow mb-3">{eyebrow}</p>}
-      <h1 className={`font-display ${size} leading-[1.05] ${className}`}>
+      <Tag className={`font-display ${size} leading-[1.05] ${className}`}>
         {text}
-      </h1>
+      </Tag>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import Title from "./components/title-font";
 import { Button } from "./components/ui/button";
 import img1 from "@images/home_hero.jpg";
 import img2 from "@images/home_cabinetSection.jpg";
+import { useState } from "react";
 
 function Domaine({ name, description }: { name: string; description: string }) {
   return (
@@ -15,7 +16,24 @@ function Domaine({ name, description }: { name: string; description: string }) {
   );
 }
 
+
 function Map() {
+  const [consent, setConsent] = useState(false);
+
+  if (!consent) {
+    return (
+      <div className="w-full h-[400px] flex flex-col items-center justify-center gap-4 bg-navy-900 text-ivory text-center px-6 border border-ivory-dim">
+        <p className="text-sm text-ivory/80 max-w-sm">
+          Le chargement de cette carte nécessite d&apos;accepter le dépôt de
+          cookies par Google Maps.
+        </p>
+        <Button variant="outline-light" onClick={() => setConsent(true)}>
+          Afficher la carte
+        </Button>
+      </div>
+    );
+  }
+
   return (
     <div className="w-full overflow-hidden shadow-lg border border-ivory-dim">
       <iframe
