@@ -35,7 +35,7 @@ export default function Cabinet() {
         <div className="relative h-full w-full flex flex-col justify-center items-center text-center px-6 backdrop-blur-xs">
           <Title
             eyebrow="Depuis 1997"
-            text="Notre Cabinet"
+            text="Le Cabinet"
             size="text-6xl sm:text-7xl lg:text-9xl"
             className="text-white uppercase tracking-widest font-semibold
               [text-shadow:0_2px_8px_rgba(0,0,0,0.9),0_8px_40px_rgba(0,0,0,0.6)]"
@@ -51,9 +51,6 @@ export default function Cabinet() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="eyebrow mb-3">Origine</p>
-              <h2 className="font-display text-3xl sm:text-4xl mb-6 text-navy-900">
-                Notre Histoire
-              </h2>
               <p className="text-slate leading-relaxed">
                 Maître Cohen a prêté serment le 4 janvier 1997. En tant qu&apos;avocat
                 au barreau de Paris, le cabinet Cohen allie expertise juridique
@@ -76,33 +73,33 @@ export default function Cabinet() {
             <div className="hidden md:block relative h-96 border-t-2 border-brass md:order-1">
               <Image
                 src={cabinet2}
-                alt="Nos valeurs"
+                alt="Les valeurs"
                 fill
                 className="object-cover shadow-xl"
               />
             </div>
             <div className="md:order-2">
-              <p className="eyebrow mb-3">Notre engagement</p>
+              <p className="eyebrow mb-3">Mon engagement</p>
               <h2 className="font-display text-3xl sm:text-4xl mb-6 text-navy-900">
-                Nos Valeurs
+                Les Valeurs
               </h2>
               <p className="text-slate leading-relaxed">
                 Disponibilité et dévouement sont les piliers de
-                notre pratique juridique. Nous nous engageons à défendre vos
+                la pratique juridique. Nous nous engageons à défendre vos
                 intérêts avec rigueur et détermination, dans le respect des
-                règles déontologiques de notre profession.
+                règles déontologiques de la profession.
               </p>
             </div>
           </div>
 
           {/* LE CABINET */}
           <div>
-            <p className="eyebrow mb-3 text-center">Nos locaux</p>
+            <p className="eyebrow mb-3 text-center">Les locaux</p>
             <h2 className="font-display text-3xl sm:text-4xl mb-6 text-navy-900 text-center">
               Le Cabinet
             </h2>
             <p className="text-slate mb-12 leading-relaxed max-w-2xl mx-auto text-center">
-              Situé au cœur de Paris, notre cabinet vous accueille dans un
+              Situé au cœur de Paris, le cabinet vous accueille dans un
               espace moderne et chaleureux, conçu pour favoriser l&apos;écoute et
               l&apos;échange. Chaque détail a été pensé pour offrir un cadre
               propice à la réflexion et à la confidentialité.
