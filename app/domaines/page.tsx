@@ -9,7 +9,7 @@ export default function Domaines() {
       <div className="h-screen flex justify-center items-center relative">
         <Title
           text="Domaines et Décisions"
-          className="text-center animate-slide-bottom text-blue-900"
+          className="text-center animate-slide-bottom text-white uppercase"
         />
       </div>
 
@@ -17,7 +17,7 @@ export default function Domaines() {
         src={img4}
         loading="lazy"
         alt="image cabinet"
-        className="fixed inset-0 -z-10 object-cover w-full h-full"
+        className="fixed inset-0 -z-10 object-cover w-full h-full blur-xs"
       />
 
       {/* Section contenu */}
