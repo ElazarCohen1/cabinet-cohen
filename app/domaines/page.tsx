@@ -6,19 +6,24 @@ export default function Domaines() {
   return (
     <div id="domaines">
       {/* Section titre avec background */}
-      <div className="h-screen flex justify-center items-center relative">
-        <Title
-          text="Domaines et Décisions"
-          className="text-center animate-slide-bottom text-white uppercase"
+      <div className="relative h-screen w-full overflow-hidden ">
+        <Image
+          src={img4}
+          alt="domains background"
+          fill
+          priority
+          className="object-cover"
         />
-      </div>
 
-      <Image
-        src={img4}
-        loading="lazy"
-        alt="image cabinet"
-        className="fixed inset-0 -z-10 object-cover w-full h-full blur-xs"
-      />
+        <div className="relative h-full w-full flex flex-col justify-center items-center text-center px-6 backdrop-blur-xs">
+          <Title
+            text="Domaines et Décisions"
+            size="text-6xl sm:text-7xl lg:text-9xl"
+            className="text-white uppercase tracking-widest font-semibold
+              [text-shadow:0_2px_8px_rgba(0,0,0,0.9),0_8px_40px_rgba(0,0,0,0.6)]"
+          />
+        </div>
+      </div>
 
       {/* Section contenu */}
       <div className="bg-white bg-opacity-90 py-20 px-6 relative z-10">

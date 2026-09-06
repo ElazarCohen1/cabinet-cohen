@@ -54,7 +54,7 @@ export default function Honoraires() {
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div className="bg-blue-50 p-6 rounded-xl">
                     <div className="text-blue-800 text-3xl mb-4">1</div>
-                    <h4 className="font-semibold text-lg mb-2">
+                    <h4 className="font-semibold text-lg mb-2 text-black">
                       Devis Préalable
                     </h4>
                     <p className="text-gray-700">
@@ -65,7 +65,7 @@ export default function Honoraires() {
 
                   <div className="bg-blue-50 p-6 rounded-xl">
                     <div className="text-blue-800 text-3xl mb-4">2</div>
-                    <h4 className="font-semibold text-lg mb-2">
+                    <h4 className="font-semibold text-lg mb-2 text-black">
                       Pas de Surprise
                     </h4>
                     <p className="text-gray-700">
@@ -85,14 +85,14 @@ export default function Honoraires() {
 
                 <div className="space-y-6">
                   <div className="border-l-4 border-blue-800 pl-4">
-                    <h4 className="font-semibold text-lg mb-1">Forfait</h4>
+                    <h4 className="font-semibold text-lg mb-1 text-black">Forfait</h4>
                     <p className="text-gray-700">
                       Forfait défini à l'avance pour des prestations précises.
                     </p>
                   </div>
 
                   <div className="border-l-4 border-blue-800 pl-4">
-                    <h4 className="font-semibold text-lg mb-1">À l'Heure</h4>
+                    <h4 className="font-semibold text-lg mb-1 text-black">À l'Heure</h4>
                     <p className="text-gray-700 mb-3">
                       Facturation basée sur le temps consacré au dossier.
                     </p>
@@ -102,7 +102,7 @@ export default function Honoraires() {
                   </div>
 
                   <div className="border-l-4 border-blue-800 pl-4">
-                    <h4 className="font-semibold text-lg mb-1">Au Résultat</h4>
+                    <h4 className="font-semibold text-lg mb-1 text-black">Au Résultat</h4>
                     <p className="text-gray-700">
                       Dans certain contentieux, la Facturation peut être conditionnée aux résultats obtenues.
                     </p>

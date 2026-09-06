@@ -67,7 +67,7 @@ export default function Accueil() {
           <Title
             eyebrow="Avocat au barreau de Paris"
             text="Bienvenue au Cabinet Cohen"
-            className="drop-shadow-lg text-8xl"
+            className="drop-shadow-lg md:text-8xl"
           />
           <p className="text-lg sm:text-xl max-w-2xl mt-6 mb-10 text-ivory/85">
             Notre expertise juridique au service de vos droits
